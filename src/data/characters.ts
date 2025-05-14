@@ -6,7 +6,7 @@ export interface Character {
   role: string[];
   keyMoment: string;
   imageUrl: string;
-  modelPath?: string; // Path to 3D model (temporary)
+  modelPath?: string;
 }
 
 export const characters: Character[] = [
@@ -22,8 +22,8 @@ export const characters: Character[] = [
       "Tries to see Maria Clara one last time before leaving."
     ],
     keyMoment: "His hopes for peaceful reform are shattered; he becomes disillusioned and desperate.",
-    imageUrl: "/characters/Ibarra.jpg",
-    modelPath: "/models/ibarra.glb"
+    imageUrl: "characters/Ibarra.jpg",
+    modelPath: "models/ibarra.glb"
   },
   {
     id: "elias",

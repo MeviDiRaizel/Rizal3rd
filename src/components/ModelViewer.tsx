@@ -34,9 +34,9 @@ const Model: React.FC<ModelProps> = ({ path }) => {
   );
 };
 
-useGLTF.preload('/models/ibarra.glb');
-useGLTF.preload('/models/default-male.glb');
-useGLTF.preload('/models/default-female.glb');
+useGLTF.preload('models/ibarra.glb');
+useGLTF.preload('models/default-male.glb');
+useGLTF.preload('models/default-female.glb');
 
 interface ModelViewerProps {
   modelPath: string;
