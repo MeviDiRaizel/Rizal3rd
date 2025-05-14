@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import videoSource from '../video/stiched.mp4';
+import posterImage from '../images/book.jpg';
 
 const Home: React.FC = () => {
   return (
@@ -26,10 +28,10 @@ const Home: React.FC = () => {
         <video 
           className="w-full h-full object-cover"
           controls
-          poster="https://images.pexels.com/photos/4386442/pexels-photo-4386442.jpeg"
+          poster={posterImage}
         >
           <source 
-            src="https://samplelib.com/lib/preview/mp4/sample-30s.mp4" 
+            src={videoSource}
             type="video/mp4" 
           />
           Your browser does not support the video tag.
