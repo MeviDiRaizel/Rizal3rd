@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Mesh, Group } from 'three';
@@ -10,7 +10,19 @@ interface ModelProps {
 const Model: React.FC<ModelProps> = ({ path }) => {
   const primitiveRef = useRef<Group>(null);
   const meshRef = useRef<Mesh>(null);
-  const { scene } = useGLTF(path);
+  const [error, setError] = useState(false);
+  
+  const { scene } = useGLTF(path, true);
+
+  useEffect(() => {
+    const handleError = (event: ErrorEvent) => {
+      console.error('Error loading model:', event.error);
+      setError(true);
+    };
+
+    window.addEventListener('error', handleError);
+    return () => window.removeEventListener('error', handleError);
+  }, [path]);
 
   useFrame(() => {
     if (primitiveRef.current) {
@@ -21,11 +33,19 @@ const Model: React.FC<ModelProps> = ({ path }) => {
     }
   });
 
+  if (error) {
+    return (
+      <mesh ref={meshRef} scale={[2, 2, 2]}>
+        <boxGeometry args={[1, 1, 1]} />
+        <meshStandardMaterial color="#c08a4c" />
+      </mesh>
+    );
+  }
+
   if (scene) {
     return <primitive ref={primitiveRef} object={scene} scale={2} />;
   }
 
-  // fallback (shouldn't happen if model loads)
   return (
     <mesh ref={meshRef} scale={[2, 2, 2]}>
       <boxGeometry args={[1, 1, 1]} />
@@ -36,24 +56,36 @@ const Model: React.FC<ModelProps> = ({ path }) => {
 
 // Preload models
 const models = [
-  'models/ibarra.glb',
-  'models/eliasFINAL.glb',
-  'models/maria.glb',
-  'models/damaso.glb',
-  'models/tiago.glb',
-  'models/salvi.glb',
-  'models/alferez.glb',
-  'models/guevara.glb',
-  'models/victorina.glb'
+  '/Rizal3rd/models/ibarra.glb',
+  '/Rizal3rd/models/eliasFINAL.glb',
+  '/Rizal3rd/models/maria.glb',
+  '/Rizal3rd/models/damaso.glb',
+  '/Rizal3rd/models/tiago.glb',
+  '/Rizal3rd/models/salvi.glb',
+  '/Rizal3rd/models/alferez.glb',
+  '/Rizal3rd/models/guevara.glb',
+  '/Rizal3rd/models/victorina.glb'
 ];
 
-models.forEach(model => useGLTF.preload(model));
+models.forEach(model => {
+  try {
+    useGLTF.preload(model);
+  } catch (error) {
+    console.error(`Error preloading model ${model}:`, error);
+  }
+});
 
 interface ModelViewerProps {
   modelPath: string;
 }
 
 const ModelViewer: React.FC<ModelViewerProps> = ({ modelPath }) => {
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    setError(false);
+  }, [modelPath]);
+
   return (
     <div className="model-container relative">
       <Canvas>
@@ -74,6 +106,11 @@ const ModelViewer: React.FC<ModelViewerProps> = ({ modelPath }) => {
       <div className="absolute bottom-4 right-4 bg-white/80 px-3 py-1 rounded text-xs text-secondary-700">
         Drag to rotate, scroll to zoom
       </div>
+      {error && (
+        <div className="absolute inset-0 flex items-center justify-center bg-red-100/80">
+          <p className="text-red-700 font-playfair">Failed to load 3D model</p>
+        </div>
+      )}
     </div>
   );
 };

@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: "/Rizal3rd",
+  publicDir: 'public',
   build: {
     assetsDir: 'assets',
     rollupOptions: {
