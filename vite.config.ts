@@ -8,7 +8,17 @@ export default defineConfig({
     assetsDir: 'assets',
     rollupOptions: {
       output: {
-        assetFileNames: 'assets/[name].[hash][extname]'
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/\.(glb|gltf)$/.test(assetInfo.name)) {
+            return `models/[name][extname]`;
+          }
+          if (/\.(png|jpe?g|webp|gif|svg)$/.test(assetInfo.name)) {
+            return `characters/[name][extname]`;
+          }
+          return `assets/[name].[hash][extname]`;
+        }
       }
     }
   }

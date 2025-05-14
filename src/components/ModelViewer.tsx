@@ -10,7 +10,7 @@ interface ModelProps {
 const Model: React.FC<ModelProps> = ({ path }) => {
   const primitiveRef = useRef<Group>(null);
   const meshRef = useRef<Mesh>(null);
-  const { scene } = useGLTF(path, true);
+  const { scene } = useGLTF(path);
 
   useFrame(() => {
     if (primitiveRef.current) {
@@ -34,9 +34,20 @@ const Model: React.FC<ModelProps> = ({ path }) => {
   );
 };
 
-useGLTF.preload('models/ibarra.glb');
-useGLTF.preload('models/default-male.glb');
-useGLTF.preload('models/default-female.glb');
+// Preload models
+const models = [
+  'models/ibarra.glb',
+  'models/eliasFINAL.glb',
+  'models/maria.glb',
+  'models/damaso.glb',
+  'models/tiago.glb',
+  'models/salvi.glb',
+  'models/alferez.glb',
+  'models/guevara.glb',
+  'models/victorina.glb'
+];
+
+models.forEach(model => useGLTF.preload(model));
 
 interface ModelViewerProps {
   modelPath: string;
