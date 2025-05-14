@@ -2,8 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import videoSource from '../video/stiched.mp4';
-import posterImage from '../images/book.jpg';
 
 const Home: React.FC = () => {
   return (
