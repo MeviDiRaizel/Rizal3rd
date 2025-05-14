@@ -25,17 +25,13 @@ const Home: React.FC = () => {
       </div>
 
       <div className="relative rounded-xl overflow-hidden shadow-xl mb-12 aspect-video border-2 border-primary-300 bg-primary-100">
-        <video 
-          className="w-full h-full object-cover"
-          controls
-          poster={posterImage}
-        >
-          <source 
-            src={videoSource}
-            type="video/mp4" 
-          />
-          Your browser does not support the video tag.
-        </video>
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/iR84EJW1RZg"
+          title="Noli Me Tangere Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 mb-12">
