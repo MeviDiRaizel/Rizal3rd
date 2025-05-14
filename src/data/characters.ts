@@ -37,8 +37,8 @@ export const characters: Character[] = [
       "Dies alone by the lake after sacrificing himself so Ibarra can live."
     ],
     keyMoment: "His self-sacrifice symbolizes the tragic fate of those who fight for justice.",
-    imageUrl: "/characters/elias.jpg",
-    modelPath: "/models/eliasFINAL.glb"
+    imageUrl: "characters/elias.jpg",
+    modelPath: "models/eliasFINAL.glb"
   },
   {
     id: "maria",
@@ -51,8 +51,8 @@ export const characters: Character[] = [
       "Has an emotional farewell with Ibarra."
     ],
     keyMoment: "Her decision to become a nun represents her loss of freedom and personal tragedy.",
-    imageUrl: "/characters/maria.jpg",
-    modelPath: "/models/maria.glb"
+    imageUrl: "characters/maria.jpg",
+    modelPath: "models/maria.glb"
   },
   {
     id: "damaso",
@@ -65,8 +65,8 @@ export const characters: Character[] = [
       "Pleads for Maria Clara's release from the convent but is too late."
     ],
     keyMoment: "His confrontation with Maria Clara shows his guilt and desperation.",
-    imageUrl: "/characters/damaso.jpg",
-    modelPath: "/models/damaso.glb"
+    imageUrl: "characters/damaso.jpg",
+    modelPath: "models/damaso.glb"
   },
   {
     id: "tiago",
@@ -78,8 +78,8 @@ export const characters: Character[] = [
       "Becomes passive and broken by the end of the novel."
     ],
     keyMoment: "His decline reflects the ruin of his family and status.",
-    imageUrl: "/characters/tiago.jpg",
-    modelPath: "/models/tiago.glb"
+    imageUrl: "characters/tiago.jpg",
+    modelPath: "models/tiago.glb"
   },
   {
     id: "salvi",
@@ -91,8 +91,8 @@ export const characters: Character[] = [
       "Uses his influence to manipulate events to his favor."
     ],
     keyMoment: "He secures Maria Clara's confinement in the convent for his own twisted motives.",
-    imageUrl: "/characters/salvi.jpg",
-    modelPath: "/models/salvi.glb"
+    imageUrl: "characters/salvi.jpg",
+    modelPath: "models/salvi.glb"
   },
   {
     id: "alferez",
@@ -104,8 +104,8 @@ export const characters: Character[] = [
       "Represents the oppressive colonial military force."
     ],
     keyMoment: "Shows the brutal side of colonial law enforcement.",
-    imageUrl: "/characters/alferez.jpg",
-    modelPath: "/models/alferez.glb"
+    imageUrl: "characters/alferez.jpg",
+    modelPath: "models/alferez.glb"
   },
   {
     id: "guevara",
@@ -117,8 +117,8 @@ export const characters: Character[] = [
       "Regrets not being able to save Ibarra from imprisonment."
     ],
     keyMoment: "Acts as one of the few voices of reason and justice in the corrupt system.",
-    imageUrl: "/characters/guavara.jpg",
-    modelPath: "/models/guevara.glb"
+    imageUrl: "characters/guavara.jpg",
+    modelPath: "models/guevara.glb"
   },
   {
     id: "victorina",
@@ -130,8 +130,8 @@ export const characters: Character[] = [
       "Symbolizes the absurdity of colonial mimicry and vanity."
     ],
     keyMoment: "Mostly serves as comic relief but highlights colonial social pretensions.",
-    imageUrl: "/characters/victorina.jpg",
-    modelPath: "/models/victorina.glb"
+    imageUrl: "characters/victorina.jpg",
+    modelPath: "models/victorina.glb"
   },
   {
     id: "linares",
@@ -144,8 +144,8 @@ export const characters: Character[] = [
       "Fails to win Maria Clara's affection."
     ],
     keyMoment: "His presence intensifies Maria Clara's despair and her decision to enter the convent.",
-    imageUrl: "/characters/Linares.webp",
-    modelPath: "/models/linares.glb"
+    imageUrl: "characters/Linares.webp",
+    modelPath: "models/linares.glb"
   },
   {
     id: "donfilipo",
@@ -158,8 +158,8 @@ export const characters: Character[] = [
       "Caught in the crossfire of political unrest."
     ],
     keyMoment: "His efforts at reform are thwarted by the entrenched colonial system.",
-    imageUrl: "/characters/Don Filipo.webp",
-    modelPath: "/models/donfilipo.glb"
+    imageUrl: "characters/Don Filipo.webp",
+    modelPath: "models/donfilipo.glb"
   },
   {
     id: "tarsilio",
@@ -172,8 +172,8 @@ export const characters: Character[] = [
       "Represents the innocent victims of colonial oppression."
     ],
     keyMoment: "His tragic death highlights the abuses of the colonial regime.",
-    imageUrl: "/characters/Tarsilo.png",
-    modelPath: "/models/tarsilio.glb"
+    imageUrl: "characters/Tarsilo.png",
+    modelPath: "models/tarsilio.glb"
   },
   {
     id: "donprimitivo",
@@ -185,8 +185,8 @@ export const characters: Character[] = [
       "Symbolizes the influence of tradition and superstition in Filipino society."
     ],
     keyMoment: "His advice often leads to humorous or ironic situations.",
-    imageUrl: "/characters/Don primitivo.png",
-    modelPath: "/models/donprimitivo.glb"
+    imageUrl: "characters/Don primitivo.png",
+    modelPath: "models/donprimitivo.glb"
   },
   {
     id: "sisa",
@@ -199,8 +199,8 @@ export const characters: Character[] = [
       "Her madness and death evoke deep sympathy and highlight the novel's emotional core."
     ],
     keyMoment: "Her reunion with Basilio before her death is one of the novel's most poignant scenes.",
-    imageUrl: "/characters/Sisa.png",
-    modelPath: "/models/sisa.glb"
+    imageUrl: "characters/Sisa.png",
+    modelPath: "models/sisa.glb"
   },
   {
     id: "dontiburcio",
@@ -213,8 +213,8 @@ export const characters: Character[] = [
       "Often used for comic relief."
     ],
     keyMoment: "His attempts to assert himself are always undermined by Doña Victorina.",
-    imageUrl: "/characters/Don Tiburcio.webp",
-    modelPath: "/models/dontiburcio.glb"
+    imageUrl: "characters/Don Tiburcio.webp",
+    modelPath: "models/dontiburcio.glb"
   }
 ];
 
